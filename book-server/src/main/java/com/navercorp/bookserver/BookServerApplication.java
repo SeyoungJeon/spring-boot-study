@@ -22,4 +22,5 @@ public class BookServerApplication {
 	public Module problemModule() {
 		return new ProblemModule();
 	}
+
 }

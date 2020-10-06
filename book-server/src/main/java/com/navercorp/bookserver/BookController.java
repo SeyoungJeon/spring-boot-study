@@ -1,5 +1,7 @@
 package com.navercorp.bookserver;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +11,7 @@ import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/books")
+@Api(value="Book CRUD", description="책 CRUD")
 public class BookController {
     private final BookService service;
 
@@ -22,6 +25,7 @@ public class BookController {
         return service.findAll();
     }
 
+    @ApiOperation("책 조회")
     @GetMapping("{id}")
     Book read(@PathVariable Integer id) {
         Book book = service.findById(id);
