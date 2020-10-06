@@ -2,13 +2,12 @@ package com.navercorp.bookserver;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.Objects;
 
-@Controller
+@RestController
 @RequestMapping("/api/books")
 public class BookController {
     private final BookService service;
@@ -26,6 +25,7 @@ public class BookController {
     @GetMapping("{id}")
     Book read(@PathVariable Integer id) {
         Book book = service.findById(id);
+        // null 체크를 해주고 null 아닐시 그대로 반환, null 일 경우 NPE 발생
         Objects.requireNonNull(book, "cannot find book with id: " + id);
         return book;
     }

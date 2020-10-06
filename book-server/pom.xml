@@ -50,11 +50,11 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- proble-spring-web -->
+		<!-- problem-spring-web -->
 		<dependency>
 			<groupId>org.zalando</groupId>
 			<artifactId>problem-spring-web</artifactId>
-			<version>0.6.0</version>
+			<version>0.22.0</version>
 		</dependency>
 
 		<!-- json-path -->
