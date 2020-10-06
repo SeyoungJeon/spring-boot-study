@@ -50,6 +50,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- proble-spring-web -->
+		<dependency>
+			<groupId>org.zalando</groupId>
+			<artifactId>problem-spring-web</artifactId>
+			<version>0.6.0</version>
+		</dependency>
+
 		<!-- json-path -->
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
